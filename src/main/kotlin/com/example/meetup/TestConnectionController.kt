@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("api/test-connection")
 class TestConnectionController {
     @GetMapping
-    fun all(): ResponseEntity<Any> {
-        return ResponseEntity.ok(DummyResponse())
-    }
+    fun all() = ResponseEntity.ok(DummyResponse())
 
     inner class DummyResponse(val name: String = "That Work's :D")
 }
